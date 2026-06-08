@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>云南寻味地图</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="paper-noise"></div>
+  <header class="site-header" id="top">
+    <div class="brand">
+      <span class="pin">📍</span>
+      <div>
+        <p class="eyebrow">Digital Extension of the Handbook</p>
+        <h1>云南寻味地图</h1>
+      </div>
+    </div>
+    <nav>
+      <a href="#map">地图探索</a>
+      <a href="#menu">我的菜单</a>
+      <a href="#qr">二维码入口</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy sticker-card">
+        <span class="tag">Scan & Explore</span>
+        <h2>纸上只装得下一顿饭，地图里藏着整个云南。</h2>
+        <p>跟着香气走，点击地图上的美食贴纸，发现云南不同地点的特色菜、传统做法和创新菜谱。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#map">开始探索</a>
+          <button class="btn ghost" id="randomBtn">随机开饭</button>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="云南元素插画">
+        <div class="sun">☀</div>
+        <div class="cloud cloud1">☁</div>
+        <div class="cloud cloud2">☁</div>
+        <div class="mountain m1"></div>
+        <div class="mountain m2"></div>
+        <div class="terrace"></div>
+        <div class="trail">································</div>
+        <div class="hero-badge peacock">🦚 孔雀羽</div>
+        <div class="hero-badge tea">🍃 普洱茶山</div>
+        <div class="floating-card c1">🍜 过桥米线</div>
+        <div class="floating-card c2">🎋 竹筒饭</div>
+        <div class="floating-card c3">🍄 炒野生菌</div>
+      </div>
+    </section>
+
+    <section class="map-section" id="map">
+      <div class="section-title">
+        <p class="eyebrow">Map Quest</p>
+        <h2>点击云南真实轮廓手绘地图</h2>
+        <p>地图保留云南轮廓特征，并加入茶山、梯田、热带雨林、少数民族纹样等云南元素。每个地点都藏着一道地方味道。</p>
+      </div>
+
+      <div class="map-layout">
+        <div class="map-wrap sticker-card">
+          <div class="map-label">YUNNAN FOOD MAP</div>
+          <svg viewBox="0 0 760 610" class="yunnan-map" aria-label="手绘云南真实轮廓地图">
+            <defs>
+              <filter id="roughPaper">
+                <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="4" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2"/>
+              </filter>
+              <clipPath id="yunnanClip">
+                <path d="M214 43 C254 31 296 45 332 39 C377 31 420 46 450 76 C481 106 496 136 536 149 C584 164 630 191 649 238 C664 276 650 314 679 345 C703 371 711 413 684 444 C653 481 604 463 581 503 C553 553 505 582 454 563 C416 548 389 516 343 527 C302 537 269 579 226 558 C189 540 187 497 147 486 C104 474 75 438 76 396 C77 357 111 334 103 298 C92 249 121 226 137 194 C153 164 137 128 160 99 C175 78 189 51 214 43 Z"/>
+              </clipPath>
+            </defs>
+
+            <path class="map-shadow" d="M214 43 C254 31 296 45 332 39 C377 31 420 46 450 76 C481 106 496 136 536 149 C584 164 630 191 649 238 C664 276 650 314 679 345 C703 371 711 413 684 444 C653 481 604 463 581 503 C553 553 505 582 454 563 C416 548 389 516 343 527 C302 537 269 579 226 558 C189 540 187 497 147 486 C104 474 75 438 76 396 C77 357 111 334 103 298 C92 249 121 226 137 194 C153 164 137 128 160 99 C175 78 189 51 214 43 Z"/>
+            <path class="map-shape" filter="url(#roughPaper)" d="M214 43 C254 31 296 45 332 39 C377 31 420 46 450 76 C481 106 496 136 536 149 C584 164 630 191 649 238 C664 276 650 314 679 345 C703 371 711 413 684 444 C653 481 604 463 581 503 C553 553 505 582 454 563 C416 548 389 516 343 527 C302 537 269 579 226 558 C189 540 187 497 147 486 C104 474 75 438 76 396 C77 357 111 334 103 298 C92 249 121 226 137 194 C153 164 137 128 160 99 C175 78 189 51 214 43 Z"/>
+
+            <g clip-path="url(#yunnanClip)" class="map-doodles">
+              <path class="river" d="M185 74 C222 140 205 189 247 229 C291 270 356 264 392 316 C425 363 402 413 458 463 C501 502 558 500 611 548"/>
+              <path class="route" d="M208 143 C288 180 330 224 387 273 C451 329 507 373 588 432"/>
+              <path class="route alt" d="M150 392 C226 356 279 309 340 279 C432 235 524 225 633 264"/>
+              <g class="terrace-lines">
+                <path d="M118 402 C168 380 222 382 264 410"/>
+                <path d="M111 424 C175 401 239 406 289 437"/>
+                <path d="M122 447 C187 427 254 434 304 465"/>
+                <path d="M143 469 C202 454 259 463 292 488"/>
+              </g>
+              <g class="tea-hills">
+                <path d="M456 112 q21 -25 42 0 q21 -25 42 0 q21 -25 42 0"/>
+                <path d="M438 139 q24 -24 48 0 q24 -24 48 0 q24 -24 48 0"/>
+                <path d="M433 165 q28 -22 56 0 q28 -22 56 0 q28 -22 56 0"/>
+              </g>
+              <g class="rainforest">
+                <path d="M500 455 l18 -56 l20 56"/><path d="M543 474 l20 -70 l24 70"/><path d="M592 453 l16 -52 l18 52"/>
+                <circle cx="520" cy="392" r="11"/><circle cx="563" cy="396" r="12"/><circle cx="609" cy="394" r="10"/>
+              </g>
+              <g class="ethnic-pattern">
+                <path d="M238 68 l18 18 l18 -18 l18 18 l18 -18"/>
+                <path d="M248 93 l18 18 l18 -18 l18 18"/>
+              </g>
+            </g>
+
+            <g class="city-labels">
+              <text x="306" y="251">昆明</text>
+              <text x="260" y="311">楚雄</text>
+              <text x="197" y="273">大理</text>
+              <text x="197" y="200">丽江</text>
+              <text x="238" y="118">香格里拉</text>
+              <text x="384" y="347">建水</text>
+              <text x="455" y="404">普洱</text>
+              <text x="544" y="493">西双版纳</text>
+              <text x="142" y="354">德宏</text>
+              <text x="509" y="206">宣威</text>
+            </g>
+          </svg>
+          <div id="pinsLayer" class="pins-layer"></div>
+          <div class="map-note">轻轻点一下，香气会自己开门。</div>
+          <div class="map-legend">
+            <span>🍃 茶山</span><span>🌾 梯田</span><span>🎋 雨林</span><span>◇ 民族纹样</span>
+          </div>
+        </div>
+
+        <aside class="side-panel sticker-card">
+          <h3>今日寻味任务</h3>
+          <p>收集 10 张美食贴纸，解锁你的数字菜单。</p>
+          <div class="progress-shell">
+            <div class="progress-bar" id="progressBar"></div>
+          </div>
+          <p class="progress-text" id="progressText">已收集 0 / 10</p>
+          <div class="hint-box">
+            <b>小提示</b>
+            <span>从南边的热带雨林开始，竹筒饭和傣味烤鱼已经在等你。</span>
+          </div>
+          <div class="mini-postcard">
+            <span>🦚</span>
+            <p>孔雀羽、茶叶、梯田、竹楼，把它们都塞进地图，网页就不会像普通旅游攻略。</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-title">
+        <p class="eyebrow">My Yunnan Menu</p>
+        <h2>我的云南菜单</h2>
+        <p>点亮过的菜会贴进这里，像把一路吃到的香气夹进手册口袋。</p>
+      </div>
+      <div class="collection-grid" id="collectionGrid"></div>
+    </section>
+
+    <section class="qr-section" id="qr">
+      <div class="qr-card sticker-card">
+        <div>
+          <p class="eyebrow">Handbook QR Entrance</p>
+          <h2>二维码放进手册时，可以这样包装</h2>
+          <p>把二维码设计成一张“云南寻味车票”，放在 storage pocket 口袋页里。读者抽出车票一扫，就从纸本厨房走进数字地图。</p>
+        </div>
+        <div class="fake-ticket">
+          <div class="ticket-title">云南寻味车票</div>
+          <div class="qr-box" aria-label="二维码占位">
+            <span></span><span></span><span></span><span></span>
+            <b>QR</b>
+          </div>
+          <small>Scan to Explore</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="foodModal" aria-hidden="true">
+    <div class="modal-card sticker-card">
+      <button class="close-btn" id="closeModal" aria-label="关闭">×</button>
+      <div class="modal-top">
+        <div class="food-emoji" id="modalEmoji">🍜</div>
+        <div>
+          <p class="eyebrow" id="modalLocation">云南 · 昆明</p>
+          <h2 id="modalTitle">过桥米线</h2>
+          <p id="modalIntro"></p>
+        </div>
+      </div>
+
+      <div class="flavor-tags" id="flavorTags"></div>
+
+      <div class="recipe-grid">
+        <div>
+          <h3>传统做法</h3>
+          <ol id="traditionalSteps"></ol>
+        </div>
+        <div>
+          <h3>创新菜谱</h3>
+          <p id="creativeRecipe"></p>
+          <button class="btn primary collect-btn" id="collectBtn">贴进我的菜单</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Made for a warm hand-drawn food handbook · 纸本体验 × 数字探索</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
