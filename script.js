@@ -7,7 +7,7 @@ const foods = [
     creative: '做成“过桥米线杯”：把米线、小料、汤包分层装进便携杯，吃前一冲，午餐也能有开盲盒的快乐。',
     best: '适合旅程第一站，用热汤打开味觉地图。',
     tip: '汤很烫，先放肉片再放米线，口感更稳。',
-    souvenir: '米线小料贴纸、汤碗印章、车票式菜单。',
+    souvenir: '米线小料卡、汤碗印章、车票纪念章。',
     pairing: '搭配酸腌菜、薄荷、小碟辣椒油。',
     prompt: '这一碗米线最像你旅途中的哪一个瞬间？'
   },
@@ -16,10 +16,10 @@ const foods = [
     intro: '一只鸡被蒸汽悄悄包围，像在锅里泡温泉。打开锅盖时，汤香会先跑出来打招呼。',
     tags: ['清鲜', '蒸汽', '鸡汤', '慢烹'],
     traditional: ['鸡肉切块，加入姜片、盐和少量香料。', '放入带汽嘴的汽锅中。', '用蒸汽慢慢焖熟，汤汁来自食材本身。', '出锅后汤清味浓，适合慢慢喝。'],
-    creative: '做成“迷你汽锅鸡汤盅”：加入菌菇和草本香料，小份上桌，像一盅能治愈赶作业灵魂的热汤。',
+    creative: '做成“迷你汽锅鸡汤盅”：加入菌菇和草本香料，小份上桌，像一盅能安慰旅途中疲惫身体的热汤。',
     best: '适合雨天或慢旅行，坐下来喝一盅热汤。',
     tip: '汤味清，不要被浓油重辣抢走风味。',
-    souvenir: '汽锅轮廓贴纸、蒸汽线条插画。',
+    souvenir: '汽锅轮廓小卡、蒸汽线条印章。',
     pairing: '搭配米饭、青菜和一点野生菌。',
     prompt: '这一口汤给你带来的第一种情绪是什么？'
   },
@@ -29,7 +29,7 @@ const foods = [
     tags: ['竹香', '糯', '热带', '便携'],
     traditional: ['糯米提前浸泡。', '加入豆类、肉丁或香料。', '装入竹筒，用火烤熟或蒸熟。', '剖开竹筒，米饭带着淡淡竹香。'],
     creative: '做成“竹筒饭饭团”：把竹香糯米捏成小饭团，外面包芭蕉叶或海苔，适合放进野餐盒。',
-    best: '适合野餐、雨林路线和手册背面贴纸互动。',
+    best: '适合野餐、雨林路线和轻松分享。',
     tip: '剖开竹筒的动作很有仪式感，可以拍成短视频。',
     souvenir: '竹节纹样、芭蕉叶包裹贴纸、竹香标签。',
     pairing: '搭配傣味烤鱼、酸辣蘸水和清爽水果。',
@@ -43,9 +43,9 @@ const foods = [
     creative: '做成“香茅烤鱼卷”：把鱼肉、香草和酸辣蘸水卷进薄饼里，传统味道一秒变街头小吃。',
     best: '适合夜市、户外烧烤和多人分享。',
     tip: '香茅和柠檬能让鱼肉更清爽，别忘了蘸水。',
-    souvenir: '香茅束贴纸、烤鱼纹理卡、火炭小图标。',
+    souvenir: '香茅束小卡、烤鱼纹理印章、火炭小图标。',
     pairing: '搭配竹筒饭、凉拌木瓜丝和冰饮。',
-    prompt: '你会把这条烤鱼贴在手册的哪一个角落？'
+    prompt: '你想把这条烤鱼记进哪一天的旅行日记？'
   },
   {
     id: 'mushroom', name: '炒野生菌', location: '云南 · 楚雄 / 昆明周边', emoji: '🍄', x: 39, y: 51,
@@ -53,8 +53,8 @@ const foods = [
     tags: ['菌香', '山野', '快炒', '鲜'],
     traditional: ['野生菌清洗切片。', '热锅下油，加入蒜片和辣椒。', '放入菌子充分炒熟。', '用盐和葱段调味，保留菌子本味。'],
     creative: '做成“野生菌意面”：用菌香做主角，搭配橄榄油和黑胡椒，让云南山林和西式餐盘握个手。',
-    best: '适合夏季菌子季，也适合做风味科普卡。',
-    tip: '野生菌必须充分炒熟，旅行手册里可以加安全提醒。',
+    best: '适合夏季菌子季，也适合在山野小馆慢慢探索。',
+    tip: '野生菌必须充分炒熟，建议选择正规餐馆并确认烹饪到位。',
     souvenir: '菌菇图鉴贴纸、山林采集笔记。',
     pairing: '搭配白米饭、青椒和清淡汤品。',
     prompt: '这种山野味道更像雨后、泥土还是木头？'
@@ -65,9 +65,9 @@ const foods = [
     tags: ['软糯', '米香', '点心', '温和'],
     traditional: ['大米浸泡后磨浆或蒸制。', '加入少量糖、坚果或当地配料。', '蒸熟后切成小块。', '趁热吃最软，放凉后更有嚼劲。'],
     creative: '做成“米糕小方杯”：一层米糕、一层鲜花酱或酸奶，像云南味道的温柔小甜品。',
-    best: '适合下午茶、手册甜品页和纪念票根。',
+    best: '适合下午茶、古城散步和轻食补给。',
     tip: '米糕口味柔和，适合和鲜花酱一起展示。',
-    souvenir: '米糕方块贴纸、米粒纹理背景。',
+    souvenir: '米糕小卡片、米粒纹理纪念章。',
     pairing: '搭配玫瑰酱、酸奶或普洱茶。',
     prompt: '这一口软糯适合写给谁？'
   },
@@ -77,7 +77,7 @@ const foods = [
     tags: ['咸香', '醇厚', '腌制', '提味'],
     traditional: ['选用猪后腿，经过修割、腌制和风干。', '切片蒸食，或与青椒、菌菇同炒。', '也可少量入汤，作为“风味放大器”。'],
     creative: '做成“火腿花卷夹”：把薄片火腿夹进小花卷，加一点酸甜酱，传统咸香变成迷你早餐堡。',
-    best: '适合做风味补充说明，解释腌制与地方气候。',
+    best: '适合搭配米饭或小吃，慢慢感受云南腌制风味。',
     tip: '咸度较明显，少量入菜更能提味。',
     souvenir: '火腿切片贴纸、风干纹理标签。',
     pairing: '搭配菌菇、青椒、米饭或小花卷。',
@@ -89,11 +89,11 @@ const foods = [
     tags: ['奶香', '大理', '可烤', '甜咸皆可'],
     traditional: ['用鲜牛奶加酸浆凝固。', '拉伸成薄片，晾成扇形。', '吃时可烤、炸，或卷白糖和玫瑰酱。'],
     creative: '做成“乳扇脆片”：切成小片烤脆，搭配鲜花蜂蜜酱，像云南版奶香薯片。',
-    best: '适合做视觉造型，扇形很容易转成贴纸。',
+    best: '适合在大理街头边走边尝，也很适合作为甜味小吃。',
     tip: '烤乳扇加玫瑰酱很有记忆点。',
-    souvenir: '乳扇折痕贴纸、玫瑰酱小罐图标。',
+    souvenir: '乳扇折痕小卡、玫瑰酱小罐图标。',
     pairing: '搭配玫瑰酱、蜂蜜、咖啡或茶。',
-    prompt: '奶香展开时，你想给这张贴纸配什么颜色？'
+    prompt: '这份奶香让你想到大理的哪一段街巷？'
   },
   {
     id: 'yak', name: '牦牛肉', location: '云南 · 香格里拉', emoji: '🥩', x: 35, y: 24,
@@ -101,9 +101,9 @@ const foods = [
     tags: ['高原', '肉香', '耐嚼', '咸鲜'],
     traditional: ['牦牛肉切条或切片。', '用盐、花椒和香料腌制。', '风干、炖煮或炒食，保留高原肉香。'],
     creative: '做成“牦牛肉能量卷”：搭配青稞饼、蔬菜和酸辣酱，适合作为旅行路上的高原能量补给。',
-    best: '适合高原路线、旅行补给和明信片文案。',
+    best: '适合高原路线和长途移动时少量补给。',
     tip: '风干类口感更有嚼劲，适合少量慢慢吃。',
-    souvenir: '雪山标签、青稞饼图标、能量卷贴纸。',
+    souvenir: '雪山标签、青稞饼图标、能量卷小卡。',
     pairing: '搭配青稞饼、酸辣酱和热茶。',
     prompt: '这份高原味道让你想到哪一种旅途温度？'
   },
@@ -112,10 +112,10 @@ const foods = [
     intro: '茶叶不只负责泡水，它也会跑进锅里当香料。鸡肉带一点茶香，清爽得像山风路过厨房。',
     tags: ['茶香', '清爽', '普洱', '草本'],
     traditional: ['鸡肉用盐和姜片腌制。', '加入普洱茶汤或茶叶一起焖煮。', '让茶香渗进肉里，收汁后出锅。'],
-    creative: '做成“茶香鸡饭盒”：茶香鸡丝搭配米饭和凉拌蔬菜，适合数字地图里的便携新菜谱。',
+    creative: '做成“茶香鸡饭盒”：茶香鸡丝搭配米饭和凉拌蔬菜，适合带在路上做一份清爽午餐。',
     best: '适合茶山路线，连接饮食和地方物产。',
     tip: '茶香要轻，不要让苦涩盖过鸡肉鲜味。',
-    souvenir: '茶叶拓印、茶山线条、小饭盒贴纸。',
+    souvenir: '小茶包、茶山明信片、小饭盒记号。',
     pairing: '搭配白米饭、凉拌菜和温热普洱茶。',
     prompt: '这道菜的茶香更像清晨还是傍晚？'
   }
@@ -190,7 +190,7 @@ function openFood(id){
   document.getElementById('modalSouvenir').textContent = currentFood.souvenir;
   document.getElementById('modalPairing').textContent = currentFood.pairing;
   document.getElementById('memoryPrompt').textContent = currentFood.prompt;
-  collectBtn.textContent = collected.includes(currentFood.id) ? '已经贴进菜单 ✓' : '贴进我的菜单';
+  collectBtn.textContent = collected.includes(currentFood.id) ? '已收藏到菜单 ✓' : '收藏到我的菜单';
   document.getElementById('visitDate').value = todayISO();
   document.getElementById('companionInput').value = '';
   document.getElementById('noteInput').value = '';
@@ -210,9 +210,9 @@ function collectCurrent(){
   if(!collected.includes(currentFood.id)){
     collected.push(currentFood.id);
     saveStorage('yunnan-collected-v3', collected);
-    showToast('已贴进我的菜单');
+    showToast('已收藏到我的菜单');
   }
-  collectBtn.textContent = '已经贴进菜单 ✓';
+  collectBtn.textContent = '已收藏到菜单 ✓';
   renderAll();
 }
 
@@ -224,10 +224,10 @@ function renderCollection(){
     const isCollected = collected.includes(food.id);
     return `
       <article class="collection-card ${isCollected ? '' : 'locked'}" data-id="${food.id}">
-        ${isCollected ? '<div class="stamp">FOUND</div>' : ''}
+        ${isCollected ? '<div class="stamp">SAVED</div>' : ''}
         <div class="emoji">${isCollected ? food.emoji : '？'}</div>
-        <h3>${isCollected ? food.name : '未探索美食'}</h3>
-        <p>${isCollected ? food.location : '去地图上找找它的香气线索。'}</p>
+        <h3>${isCollected ? food.name : '未收藏美食'}</h3>
+        <p>${isCollected ? food.location : '去地图上找找下一道味道。'}</p>
       </article>
     `;
   }).join('');
@@ -270,7 +270,7 @@ function saveDiaryEntry(){
 
 function renderDiary(){
   if(!diaryEntries.length){
-    diaryList.innerHTML = '<div class="empty-state">还没有旅行记录。点开任意一道菜，写下日期、同行人和一句话记忆，网页就会变成你的数字纪念册。</div>';
+    diaryList.innerHTML = '<div class="empty-state">还没有旅行记录。点开任意一道菜，写下日期、同行人和一句话记忆，它就会成为你的云南旅行纪念册。</div>';
     return;
   }
   diaryList.innerHTML = diaryEntries.map(entry => `
@@ -306,11 +306,11 @@ function populatePostcardSelect(){
 function makePostcard(){
   const food = foods.find(item => item.id === document.getElementById('postcardFood').value) || foods[0];
   const mood = document.getElementById('postcardMood').value;
-  const name = document.getElementById('postcardName').value.trim() || '一位偷溜进厨房的旅人';
+  const name = document.getElementById('postcardName').value.trim() || '一位正在云南寻味的旅人';
   const lines = [
-    `来自${food.location}的一张小明信片：`,
+    `一张来自${food.location}的明信片：`,
     `今天我以“${mood}”的速度遇见了${food.name}。${food.intro}`,
-    `我想带走的纪念物是：${food.souvenir}`,
+    `我想记住的旅行细节是：${food.souvenir}`,
     `署名：${name}`
   ];
   document.getElementById('postcardOutput').textContent = lines.join('\n');
@@ -323,7 +323,7 @@ function copyPostcard(){
     return;
   }
   if(navigator.clipboard){
-    navigator.clipboard.writeText(text).then(() => showToast('明信片文案已复制'));
+    navigator.clipboard.writeText(text).then(() => showToast('明信片已复制'));
   }else{
     showToast('可以手动选中文案复制');
   }
