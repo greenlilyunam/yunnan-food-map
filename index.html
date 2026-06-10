@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>云南寻味地图</title>
+  <title>云南寻味地图 · 数字旅行手册</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,6 +19,7 @@
     <nav>
       <a href="#map">地图探索</a>
       <a href="#menu">我的菜单</a>
+      <a href="#record">味觉日记</a>
       <a href="#qr">二维码入口</a>
     </nav>
   </header>
@@ -26,12 +27,17 @@
   <main>
     <section class="hero">
       <div class="hero-copy sticker-card">
-        <span class="tag">Scan & Explore</span>
+        <span class="tag">Scan · Taste · Record</span>
         <h2>纸上只装得下一顿饭，地图里藏着整个云南。</h2>
-        <p>跟着香气走，点击地图上的美食贴纸，发现云南不同地点的特色菜、传统做法和创新菜谱。</p>
+        <p>跟着香气走，点击地图上的美食贴纸，发现云南不同地点的特色菜、传统做法、创新菜谱，还可以留下自己的味觉日记和旅行明信片。</p>
         <div class="hero-actions">
           <a class="btn primary" href="#map">开始探索</a>
           <button class="btn ghost" id="randomBtn">随机开饭</button>
+        </div>
+        <div class="hero-stats">
+          <div><b>10</b><span>张美食贴纸</span></div>
+          <div><b>∞</b><span>份味觉日记</span></div>
+          <div><b>1</b><span>张扫码车票</span></div>
         </div>
       </div>
 
@@ -45,6 +51,7 @@
         <div class="trail">································</div>
         <div class="hero-badge peacock">🦚 孔雀羽</div>
         <div class="hero-badge tea">🍃 普洱茶山</div>
+        <div class="hero-badge memory">✍ 旅行日记</div>
         <div class="floating-card c1">🍜 过桥米线</div>
         <div class="floating-card c2">🎋 竹筒饭</div>
         <div class="floating-card c3">🍄 炒野生菌</div>
@@ -54,69 +61,61 @@
     <section class="map-section" id="map">
       <div class="section-title">
         <p class="eyebrow">Map Quest</p>
-        <h2>点击云南真实轮廓手绘地图</h2>
-        <p>地图保留云南轮廓特征，并加入茶山、梯田、热带雨林、少数民族纹样等云南元素。每个地点都藏着一道地方味道。</p>
+        <h2>悬停探索云南真实轮廓地图</h2>
+        <p>地图改为更接近云南省真实边界的轮廓。默认只显示美食地点图标，鼠标移上去才会露出地点纸签，点击后可以查看做法、实用提示，并把当下感受写进日记。</p>
       </div>
 
       <div class="map-layout">
         <div class="map-wrap sticker-card">
           <div class="map-label">YUNNAN FOOD MAP</div>
-          <svg viewBox="0 0 760 610" class="yunnan-map" aria-label="手绘云南真实轮廓地图">
+          <svg viewBox="0 0 760 610" class="yunnan-map" aria-label="云南省真实轮廓风格地图" preserveAspectRatio="xMidYMid meet">
             <defs>
               <filter id="roughPaper">
                 <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="4" result="noise"/>
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.4"/>
               </filter>
               <clipPath id="yunnanClip">
-                <path d="M214 43 C254 31 296 45 332 39 C377 31 420 46 450 76 C481 106 496 136 536 149 C584 164 630 191 649 238 C664 276 650 314 679 345 C703 371 711 413 684 444 C653 481 604 463 581 503 C553 553 505 582 454 563 C416 548 389 516 343 527 C302 537 269 579 226 558 C189 540 187 497 147 486 C104 474 75 438 76 396 C77 357 111 334 103 298 C92 249 121 226 137 194 C153 164 137 128 160 99 C175 78 189 51 214 43 Z"/>
+                <path d="M286 46 C318 61 341 36 369 62 C397 87 399 113 436 124 C467 133 493 113 528 132 C565 152 579 188 620 204 C664 222 688 263 672 306 C660 337 689 366 688 404 C687 449 653 476 612 480 C582 484 565 510 544 541 C513 587 466 586 433 555 C404 529 366 518 333 537 C286 565 237 588 197 559 C163 534 178 488 130 470 C87 454 69 410 92 374 C116 337 84 300 108 262 C130 225 128 184 153 148 C181 106 198 67 236 65 C253 64 265 39 286 46 Z"/>
               </clipPath>
             </defs>
 
-            <path class="map-shadow" d="M214 43 C254 31 296 45 332 39 C377 31 420 46 450 76 C481 106 496 136 536 149 C584 164 630 191 649 238 C664 276 650 314 679 345 C703 371 711 413 684 444 C653 481 604 463 581 503 C553 553 505 582 454 563 C416 548 389 516 343 527 C302 537 269 579 226 558 C189 540 187 497 147 486 C104 474 75 438 76 396 C77 357 111 334 103 298 C92 249 121 226 137 194 C153 164 137 128 160 99 C175 78 189 51 214 43 Z"/>
-            <path class="map-shape" filter="url(#roughPaper)" d="M214 43 C254 31 296 45 332 39 C377 31 420 46 450 76 C481 106 496 136 536 149 C584 164 630 191 649 238 C664 276 650 314 679 345 C703 371 711 413 684 444 C653 481 604 463 581 503 C553 553 505 582 454 563 C416 548 389 516 343 527 C302 537 269 579 226 558 C189 540 187 497 147 486 C104 474 75 438 76 396 C77 357 111 334 103 298 C92 249 121 226 137 194 C153 164 137 128 160 99 C175 78 189 51 214 43 Z"/>
+            <path class="map-shadow" d="M286 46 C318 61 341 36 369 62 C397 87 399 113 436 124 C467 133 493 113 528 132 C565 152 579 188 620 204 C664 222 688 263 672 306 C660 337 689 366 688 404 C687 449 653 476 612 480 C582 484 565 510 544 541 C513 587 466 586 433 555 C404 529 366 518 333 537 C286 565 237 588 197 559 C163 534 178 488 130 470 C87 454 69 410 92 374 C116 337 84 300 108 262 C130 225 128 184 153 148 C181 106 198 67 236 65 C253 64 265 39 286 46 Z"/>
+            <path class="map-shape" filter="url(#roughPaper)" d="M286 46 C318 61 341 36 369 62 C397 87 399 113 436 124 C467 133 493 113 528 132 C565 152 579 188 620 204 C664 222 688 263 672 306 C660 337 689 366 688 404 C687 449 653 476 612 480 C582 484 565 510 544 541 C513 587 466 586 433 555 C404 529 366 518 333 537 C286 565 237 588 197 559 C163 534 178 488 130 470 C87 454 69 410 92 374 C116 337 84 300 108 262 C130 225 128 184 153 148 C181 106 198 67 236 65 C253 64 265 39 286 46 Z"/>
 
-            <g clip-path="url(#yunnanClip)" class="map-doodles">
-              <path class="river" d="M185 74 C222 140 205 189 247 229 C291 270 356 264 392 316 C425 363 402 413 458 463 C501 502 558 500 611 548"/>
-              <path class="route" d="M208 143 C288 180 330 224 387 273 C451 329 507 373 588 432"/>
-              <path class="route alt" d="M150 392 C226 356 279 309 340 279 C432 235 524 225 633 264"/>
+            <g clip-path="url(#yunnanClip)" class="map-doodles map-real-doodles" aria-hidden="true">
+              <path class="river" d="M222 78 C211 126 244 165 232 209 C218 260 259 294 316 309 C374 325 382 374 430 407 C474 437 517 465 548 530"/>
+              <path class="route" d="M260 114 C332 158 374 207 430 267 C485 327 533 384 602 451"/>
+              <path class="route alt" d="M121 392 C183 358 252 340 318 304 C403 259 500 234 636 260"/>
               <g class="terrace-lines">
-                <path d="M118 402 C168 380 222 382 264 410"/>
-                <path d="M111 424 C175 401 239 406 289 437"/>
-                <path d="M122 447 C187 427 254 434 304 465"/>
-                <path d="M143 469 C202 454 259 463 292 488"/>
+                <path d="M120 403 C169 381 223 382 266 410"/>
+                <path d="M113 425 C177 402 240 406 291 437"/>
+                <path d="M124 448 C188 428 255 435 306 466"/>
+                <path d="M145 470 C203 455 260 464 294 489"/>
               </g>
               <g class="tea-hills">
-                <path d="M456 112 q21 -25 42 0 q21 -25 42 0 q21 -25 42 0"/>
-                <path d="M438 139 q24 -24 48 0 q24 -24 48 0 q24 -24 48 0"/>
-                <path d="M433 165 q28 -22 56 0 q28 -22 56 0 q28 -22 56 0"/>
+                <path d="M444 124 q23 -23 46 0 q23 -23 46 0 q23 -23 46 0"/>
+                <path d="M432 151 q26 -22 52 0 q26 -22 52 0 q26 -22 52 0"/>
+                <path d="M427 178 q30 -21 60 0 q30 -21 60 0 q30 -21 60 0"/>
               </g>
               <g class="rainforest">
-                <path d="M500 455 l18 -56 l20 56"/><path d="M543 474 l20 -70 l24 70"/><path d="M592 453 l16 -52 l18 52"/>
-                <circle cx="520" cy="392" r="11"/><circle cx="563" cy="396" r="12"/><circle cx="609" cy="394" r="10"/>
+                <path d="M447 464 l18 -55 l20 55"/><path d="M490 486 l22 -73 l25 73"/><path d="M545 462 l17 -54 l19 54"/>
+                <circle cx="466" cy="404" r="11"/><circle cx="512" cy="406" r="12"/><circle cx="563" cy="405" r="10"/>
               </g>
               <g class="ethnic-pattern">
-                <path d="M238 68 l18 18 l18 -18 l18 18 l18 -18"/>
-                <path d="M248 93 l18 18 l18 -18 l18 18"/>
+                <path d="M246 76 l18 18 l18 -18 l18 18 l18 -18"/>
+                <path d="M257 101 l18 18 l18 -18 l18 18"/>
               </g>
-            </g>
-
-            <g class="city-labels">
-              <text x="306" y="251">昆明</text>
-              <text x="260" y="311">楚雄</text>
-              <text x="197" y="273">大理</text>
-              <text x="197" y="200">丽江</text>
-              <text x="238" y="118">香格里拉</text>
-              <text x="384" y="347">建水</text>
-              <text x="455" y="404">普洱</text>
-              <text x="544" y="493">西双版纳</text>
-              <text x="142" y="354">德宏</text>
-              <text x="509" y="206">宣威</text>
+              <g class="map-outline-lines">
+                <path d="M166 160 C213 172 242 206 240 245"/>
+                <path d="M528 133 C524 170 552 202 618 204"/>
+                <path d="M200 558 C255 522 287 516 333 537"/>
+              </g>
             </g>
           </svg>
           <div id="pinsLayer" class="pins-layer"></div>
-          <div class="map-note">轻轻点一下，香气会自己开门。</div>
+          <div class="map-note">悬停看地点，点击开菜单。</div>
           <div class="map-legend">
-            <span>🍃 茶山</span><span>🌾 梯田</span><span>🎋 雨林</span><span>◇ 民族纹样</span>
+            <span>默认：只显示地点图标</span><span>悬停：显示菜名和地点</span>
           </div>
         </div>
 
@@ -127,9 +126,9 @@
             <div class="progress-bar" id="progressBar"></div>
           </div>
           <p class="progress-text" id="progressText">已收集 0 / 10</p>
-          <div class="hint-box">
+<div class="hint-box">
             <b>小提示</b>
-            <span>从南边的热带雨林开始，竹筒饭和傣味烤鱼已经在等你。</span>
+            <span>从南边的热带雨林开始，竹筒饭和傣味烤鱼已经在等你。点开菜品后可以写味觉日记。</span>
           </div>
           <div class="mini-postcard">
             <span>🦚</span>
@@ -143,24 +142,59 @@
       <div class="section-title">
         <p class="eyebrow">My Yunnan Menu</p>
         <h2>我的云南菜单</h2>
-        <p>点亮过的菜会贴进这里，像把一路吃到的香气夹进手册口袋。</p>
+        <p>点亮过的菜会贴进这里，像把一路吃到的香气夹进手册口袋。每张卡片都可以作为“旅行贴纸墙”的数字版本。</p>
       </div>
       <div class="collection-grid" id="collectionGrid"></div>
     </section>
-
+    <section class="record-section" id="record">
+      <div class="section-title">
+        <p class="eyebrow">Taste Diary</p>
+        <h2>我的味觉日记</h2>
+        <p>旅行不只是“看到了”，也要留下“我当时怎么感觉”。这里记录日期、同行人、天气、评分和一句话记忆，会保存在当前浏览器里。</p>
+      </div>
+      <div class="record-layout">
+        <div class="diary-card sticker-card">
+          <div class="record-head">
+            <h3>旅行记录夹</h3>
+            <button class="btn ghost mini-btn" id="clearDiaryBtn">清空日记</button>
+          </div>
+          <div class="diary-list" id="diaryList"></div>
+        </div>
+        <div class="postcard-card sticker-card">
+          <h3>生成一张云南明信片</h3>
+          <p>选择一道菜和一种旅行心情，生成可以复制到 PPT、网站说明或手册背面的纪念文案。</p>
+          <label>选择美食
+            <select id="postcardFood"></select>
+          </label>
+          <label>今天的心情
+            <select id="postcardMood">
+              <option value="慢慢走">慢慢走</option>
+              <option value="热闹开饭">热闹开饭</option>
+              <option value="雨林散步">雨林散步</option>
+              <option value="茶山发呆">茶山发呆</option>
+              <option value="夜市冒险">夜市冒险</option>
+            </select>
+          </label>
+          <label>署名
+            <input id="postcardName" type="text" maxlength="18" placeholder="比如：一位偷溜进厨房的旅人" />
+          </label>
+          <button class="btn primary" id="makePostcardBtn">生成明信片文案</button>
+          <div class="postcard-output" id="postcardOutput"></div>
+          <button class="btn ghost" id="copyPostcardBtn">复制文案</button>
+        </div>
+      </div>
+    </section>
     <section class="qr-section" id="qr">
       <div class="qr-card sticker-card">
         <div>
           <p class="eyebrow">Handbook QR Entrance</p>
           <h2>二维码放进手册时，可以这样包装</h2>
-          <p>把二维码设计成一张“云南寻味车票”，放在 storage pocket 口袋页里。读者抽出车票一扫，就从纸本厨房走进数字地图。</p>
+          <p>把二维码设计成一张“云南寻味车票”，放在 storage pocket 口袋页里。读者抽出车票一扫，就从纸本厨房走进数字地图，完成收集、记录和生成明信片。</p>
         </div>
         <div class="fake-ticket">
-          <div class="ticket-title">云南寻味车票</div>
-          <div class="qr-box" aria-label="云南寻味地图二维码">
-          <img src="images/yunnan-ticket-qr.png" alt="云南寻味地图二维码" />
-          </div>
-          <small>Scan to Explore</small>
+        <div class="ticket-title">云南寻味车票</div>
+        <img class="real-qr" src="images/qr.png" alt="云南寻味地图二维码">
+        <small>Scan to Explore</small>
         </div>
       </div>
     </section>
@@ -180,6 +214,13 @@
 
       <div class="flavor-tags" id="flavorTags"></div>
 
+      <div class="modal-info-grid">
+        <article><b>适合场景</b><span id="modalBest"></span></article>
+        <article><b>实用提示</b><span id="modalTip"></span></article>
+        <article><b>纪念物</b><span id="modalSouvenir"></span></article>
+        <article><b>搭配建议</b><span id="modalPairing"></span></article>
+      </div>
+
       <div class="recipe-grid">
         <div>
           <h3>传统做法</h3>
@@ -191,11 +232,51 @@
           <button class="btn primary collect-btn" id="collectBtn">贴进我的菜单</button>
         </div>
       </div>
+
+      <div class="memory-form">
+        <div>
+          <h3>写一条味觉日记</h3>
+          <p id="memoryPrompt">把这一口味道写进旅行记录。</p>
+        </div>
+        <div class="form-grid">
+          <label>日期
+            <input id="visitDate" type="date" />
+          </label>
+          <label>同行人
+            <input id="companionInput" type="text" maxlength="20" placeholder="朋友 / 家人 / 自己" />
+          </label>
+          <label>天气
+            <select id="weatherSelect">
+              <option>晴天</option>
+              <option>小雨</option>
+              <option>阴天</option>
+              <option>傍晚</option>
+              <option>夜市灯光</option>
+            </select>
+          </label>
+          <div class="rating-box">
+            <span>味道评分</span>
+            <div class="stars" id="ratingStars">
+              <button data-value="1">★</button>
+              <button data-value="2">★</button>
+              <button data-value="3">★</button>
+              <button data-value="4">★</button>
+              <button data-value="5">★</button>
+            </div>
+          </div>
+        </div>
+        <label>一句话记录
+          <textarea id="noteInput" maxlength="120" placeholder="比如：竹香混着炭火味，像把雨林装进饭团里。"></textarea>
+        </label>
+        <button class="btn primary" id="saveNoteBtn">保存到味觉日记</button>
+      </div>
     </div>
   </div>
 
+  <div class="toast" id="toast">已保存</div>
+
   <footer>
-    <p>Made for a warm hand-drawn food handbook · 纸本体验 × 数字探索</p>
+    <p>Made for a warm hand-drawn food handbook · 纸本体验 × 数字探索 × 旅行记录</p>
   </footer>
 
   <script src="script.js"></script>
